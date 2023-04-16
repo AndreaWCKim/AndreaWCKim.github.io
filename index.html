@@ -10,16 +10,23 @@
 
   <p id='line'>No contents now...+/br</p>
 	<button onclick="showWindow()"> WIN TEST </button>
-  <p id='canvas'>Canvas+/br</p>
+  <p id='canvas'>Canvas</p>
 	<button onclick="draw()"> Draw Rect </button>
 	
 	<script>
-		for (var i==0;i<10;i++){
-			<p> document.write('%02d\n') </p>
+		function count(){
+			for (var i=0;i<10;i++){
+		   <p> "The number is" + i.toString(); 
 		}
+	</script>
+	
+	
+	<script>
 		function showWindow(){
 			alert("Thanks for coming by")
 		}
+	</script>
+	<script>
 		function draw() {
 		  var ctx = document.getElementById('canvas').getContext('2d');
 
