@@ -4,15 +4,38 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+	<title>Andrea K First Page</title>
 </head>
 <body style="background-color:black;">
-  <p>No contentsnow...</p>
+  <p>No contents now...</p>
 	<button onclick="showWindow()"> WIN TEST </button>
+	<button onclick="loop()"> ROTATE </button>
+	
 	<script>
 		function showWindow(){
 			alert("Thanks for coming by")
 		}
+		  function loop(){
+  
+			const rotation = (degree * Math.PI) / 180;    
+			const targetX = window.innerWidth / 2 + 80 * Math.cos(rotation) - 10;
+			const targetY = window.innerHeight / 2 + 80 * Math.sin(rotation) - 10;
+
+			character.style.left = `${targetX}px`;
+			character.style.top = `${targetY}px`;
+
+       			degree += 15;
+			
+    
+                        requestAnimationFrame(loop);
+               }
 	</script>
 </body>
 </html>
+
+
+	
+
+  let degree = 0; 
+  loop();
+  
